@@ -1,8 +1,0 @@
-Initial release version 2.0 
--------------------------------------
-Basic updating of the orginal TCA software from 2005.  This version is not avaliable for download
-
-
-Initial release version 2.1
--------------------------------------
- Vehicles can be equipped to generate and transmit Probe Data Messages (PDMs) or Basic Safety Messages (BSMs) which can be transmitted by either Dedicated Short Range Communication (DSRC) or via cellular. The TCA program version 2 Build 1 or 2.1 assumes perfect communication between vehicles and RSEs but future versions of the TCA 2 will include simulated communication disruptions. As soon as a vehicle equipped to transmit via DSRC is in range of a RSE, it will download all of its snapshot information directly without any loss of information. Similarly, if the vehicle is equipped to transmit via cellular, it will download all its snapshot information directly but those snapshots might be lost or delayed due to user-defined loss rate and latency.
