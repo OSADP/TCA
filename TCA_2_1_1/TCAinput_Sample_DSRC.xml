@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ControlFile>
+	<!--
+	OutputLevel can be:
+	0=None
+	1=Just major events,
+	2=All SS activities,
+	3=Maximum output
+ 	-->
+	<OutputLevel>1</OutputLevel>
+	<Title>CSV Example File</Title>
+	<Seed>342554</Seed>
+	<InputFiles>
+		<TrajectoryFile>
+			<FileType>csv</FileType>
+			<FileName>NCAR09_traj_0420_test.csv</FileName>
+			<CSVTrajectoryFileFields>
+				<X>x-ft</X>
+				<Y>y-ft</Y>
+				<Time>secs</Time>
+				<ID>veh</ID>
+				<Speed>speed (mph)</Speed>				
+			</CSVTrajectoryFileFields>
+		</TrajectoryFile>
+		<RSELocationFile>Sample_DSRC/RSE_Locations.csv</RSELocationFile>
+		<StrategyFile>Sample_DSRC/Strategy_Sample_DSRC.xml</StrategyFile>		
+	</InputFiles>
+	<EquippedVehicles>
+		<PDMMarketPenetration>90</PDMMarketPenetration>				
+	</EquippedVehicles>
+	<OutputFiles>
+		<PDMAllFile>Sample_DSRC/PDMAllSnapshots.csv</PDMAllFile>
+		<PDMTransFile>Sample_DSRC/PDMTransSnapshots.csv</PDMTransFile>
+	</OutputFiles>
+</ControlFile>

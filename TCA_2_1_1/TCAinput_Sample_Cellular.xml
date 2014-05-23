@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ControlFile>
+	<!--
+	OutputLevel can be:
+	0=None
+	1=Just major events,
+	2=All SS activities,
+	3=Maximum output
+ 	-->
+	<OutputLevel>1</OutputLevel>
+	<Title>Cellular PDMs and DSRC BSMs example</Title>
+	<Seed>342554</Seed>
+	<InputFiles>
+		<TrajectoryFile>
+			<FileType>csv</FileType>
+			<FileName>NCAR09_traj_0420_test.csv</FileName>
+			<CSVTrajectoryFileFields>
+				<X>x-ft</X>
+				<Y>y-ft</Y>
+				<Time>secs</Time>
+				<ID>veh</ID>
+				<Speed>speed (mph)</Speed>	
+			</CSVTrajectoryFileFields>		
+		</TrajectoryFile>
+		<StrategyFile>Sample_Cellular/Strategy_Sample_Cellular.xml</StrategyFile>		
+	</InputFiles>
+	<EquippedVehicles>
+		<PDMMarketPenetration>50</PDMMarketPenetration>	
+		<BSMMarketPenetration>50</BSMMarketPenetration>			
+	</EquippedVehicles>	
+	<OutputFiles>
+		<PDMAllFile>Sample_Cellular/PDMTCAoutALL.csv</PDMAllFile>
+		<PDMTransFile>Sample_Cellular/PDMTCAoutTrans.csv</PDMTransFile>
+		<BSMTransFile>Sample_Cellular/BSMTCAoutTrans.csv</BSMTransFile>		
+		<BSMExtendedFile>Sample_Cellular/BSMExtendedTrans.csv</BSMExtendedFile>		
+	</OutputFiles>
+	<BSMExtendedFlag>1</BSMExtendedFlag>
+</ControlFile>

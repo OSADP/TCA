@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ControlFile>
+	<!--
+	OutputLevel can be:
+	0=None
+	1=Just major events,
+	2=All SS activities,
+	3=Maximum output
+ 	-->
+	<OutputLevel>1</OutputLevel>
+	<Title>Test File For Reading In VISSIM Data</Title>
+	<Seed>342554</Seed>
+	<InputFiles>	
+		<TrajectoryFile>
+			<FileType>vissim</FileType>
+			<FileName>Sample_VISSIM/Sample_VISSIM_output.fzp</FileName>		
+		</TrajectoryFile>			
+		<RSELocationFile>Sample_VISSIM/RSE_Locations_VISSIM.csv</RSELocationFile>
+		<StrategyFile>Sample_VISSIM/Strategy_Sample_VISSIM.xml</StrategyFile>		
+	</InputFiles>
+	<EquippedVehicles>
+		<PDMVehicleTypes>1</PDMVehicleTypes>
+	</EquippedVehicles>	
+	<OutputFiles>
+		<PDMAllFile>Sample_VISSIM/PDMAllSnapshots.csv</PDMAllFile>
+		<PDMTransFile>Sample_VISSIM/PDMTransSnapshots.csv</PDMTransFile>	
+	</OutputFiles>
+</ControlFile>

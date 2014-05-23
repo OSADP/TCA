@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8" ?> 
+<Strategy>
+  <Title>Sample with PDMs transmitted via Cellular and BSMs via DSRC</Title>
+<Inputs> 
+  <DSRC>
+   <PSNStrategy>
+       <!--  Time between PSN Switches in Seconds  --> 
+        <TimeBetweenPSNSwitches>120</TimeBetweenPSNSwitches> 
+       <!--  Distance between PSN in feet   --> 
+        <DistanceBetweenPSNSwitches>3281</DistanceBetweenPSNSwitches> 
+       <!--  If Last RSE transmitted to is Included in Snapshot output 0-false 1-true --> 
+        <RSEFlag>0</RSEFlag> 
+       <!-- 
+      If PSN Privacy gap is used:
+      0 - No Gaps used
+      1 - Rollover Gaps used (PSN changes if max time/distance is met)
+      TODO: Add node to change rollover strategy options.
+        --> 
+        <Gap>0</Gap> 
+    </PSNStrategy>
+   <StopStartStrategy>
+       <!-- 
+      Stop/Start Strategy can be:
+      1 - Max Time and Speed (both time and speed triggers start/stop)
+      2 - Max Distance or time (either distance traveled or time motionless triggers start/stop)
+        --> 
+        <Strategy>1</Strategy> 
+       <!--  Time threshold in seconds that is required to create a stop  --> 
+        <StopThreshold>5</StopThreshold> 
+       <!--  Time in seconds that must pass before a 2nd stop snapshot can be taken  --> 
+        <StopLag>15</StopLag> 
+       <!--  Speed in mph that a vechicle must have before a start snapshot can be taken 
+        --> 
+        <StartThreshold>10</StartThreshold> 
+       <!--  Can more than one SS in a row be taken 0-false 1-true 
+        --> 
+        <MultipleStops>0</MultipleStops> 
+    </StopStartStrategy>
+   <PeriodicStrategy>
+       <!-- 
+      Periodic Strategy can be:
+      1 - Speed Interpolation (Periodic SS taken based on Speed value) 
+      2 - Speed Exceptions (Periodic SS taken based on change in Speed)
+        --> 
+        <Strategy>1</Strategy> 
+       <!--  Starting low speed threshold in mph that starts interpolation strategy 1 only  --> 
+        <LowSpeedThreshold>20</LowSpeedThreshold> 
+       <!--  Starting short time in seconds threshold that starts interpolation strategy 1 only  --> 
+        <ShortSpeedInterval>6</ShortSpeedInterval> 
+       <!--  Starting high speed threshold in mph that starts interpolation strategy 1 only  --> 
+        <HighSpeedThreshold>60</HighSpeedThreshold> 
+       <!--  Starting Long time in seconds threshold that starts interpolation strategy 1 only  --> 
+        <LongSpeedInterval>20</LongSpeedInterval> 
+       <!--  Percentage change in speed strategy 2 only  --> 
+        <MaxDeltaSpeed>0.10</MaxDeltaSpeed> 
+    </PeriodicStrategy>
+   <BufferStrategy>
+       <!--  Total size of the buffer  --> 
+        <TotalCapacity>30</TotalCapacity> 
+       <!-- 
+      Buffer Retention Strategy can be:
+      1 - FIFO
+      2 - Every other SnapShot
+      3 - Every other plus keep first and last ID
+      4 - Every other plus save oldest SS
+        --> 
+        <SSRetention>4</SSRetention> 
+    </BufferStrategy>
+   <RSEInformation>
+       <!--  Min range for communication to RSE in feet  --> 
+        <MinRSERange>492</MinRSERange> 
+       <!--  Max range for communication to RSE in feet  --> 
+        <MaxRSERange>492</MaxRSERange> 
+       <!--  Timeout gap in seconds for RSE interaction  --> 
+        <TimeoutRSE>200</TimeoutRSE> 
+       <!--  Number of SS transmitted at a time.    --> 
+        <MinNumberofSStoTransmit>1</MinNumberofSStoTransmit> 
+       <!--  Number of times vehicle can transmit to RSE (0 value all of the time)  --> 
+        <RSEReports>1</RSEReports> 
+    </RSEInformation>
+   <GapInformation>
+       <!--  Min time in seconds for random generation of gap   --> 
+        <MinTime>3</MinTime> 
+       <!--  Max time in seconds for random generation of gap  --> 
+        <MaxTime>13</MaxTime> 
+       <!--  Min Distance in feet for random generation of gap  --> 
+        <MinDistance>164</MinDistance> 
+       <!--  Max Distance in feet for random generation of gap  --> 
+        <MaxDistance>820</MaxDistance> 
+    </GapInformation>
+  </DSRC>
+  <Cellular>
+    <!-- If cellular communication is used: 
+      0: Not used
+      1: Cellular comm used (Vehicles transmit snapshots via cellular according to defined latency) -->
+      <PDMCellularFlag>1</PDMCellularFlag>
+      <BSMCellularFlag>0</BSMCellularFlag>
+      <MinNumberofSStoTransmitViaCellular>1</MinNumberofSStoTransmitViaCellular>
+      <DefaultLossPercent>10</DefaultLossPercent>
+      <DefaultLatency>1000</DefaultLatency>
+      <Regions>
+        <Region1>
+          <Name>Cellular_Region1</Name>
+          <Point1>-6153,-2543</Point1>
+          <Point2>-5977,-2637</Point2>
+          <LossPercent>2</LossPercent>
+          <Latency>2000</Latency>
+        </Region1>
+        <Region2>
+          <Name>Cellular_Region2</Name>
+          <Point1>-5923,-2545</Point1>
+          <Point2>-5761,-2625</Point2>
+          <LossPercent>1</LossPercent>
+          <Latency>500</Latency>
+        </Region2>
+        <Region3>
+          <Name>Cellular_Region3</Name>
+          <Point1>-5689,-2525</Point1>
+          <Point2>-5400,-2659</Point2>
+          <LossPercent>50</LossPercent>
+          <Latency>8000</Latency>
+        </Region3>
+        <Region4>
+          <Name>Cellular_Region4</Name>
+          <Point1>-5380,-2539</Point1>
+          <Point2>-4918,-2640</Point2>
+          <LossPercent>4</LossPercent>
+          <Latency>200</Latency>
+        </Region4>
+      </Regions>
+    </Cellular>
+</Inputs>
+</Strategy>

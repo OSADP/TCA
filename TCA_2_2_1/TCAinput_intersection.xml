@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ControlFile>
+	<!--
+	OutputLevel can be:
+	0=None
+	1=Just major events,
+	2=All SS activities,
+	3=Maximum output
+ 	-->
+	<OutputLevel>1</OutputLevel>
+	<Title>Test File For Reading In VISSIM Data</Title>
+	<Seed>342554</Seed>
+	<InputFiles>	
+		<TrajectoryFile>
+			<FileType>vissim</FileType>
+			<FileName>Example_FZP/intersection.fzp</FileName>		
+		</TrajectoryFile>			
+		<RSELocationFile>Example_FZP/RSE_Locations_intersection.csv</RSELocationFile>
+		<StrategyFile>Example_FZP/Strategy_intersection.xml</StrategyFile>		
+		<RegionsFile>Example_FZP/TCA_Regions_intersection.xml</RegionsFile>
+	</InputFiles>
+	<EquippedVehicles>		
+		<PDMVehicleTypes>1,4</PDMVehicleTypes>
+		<BSMVehicleTypes>2</BSMVehicleTypes>		
+		<DualPDMBSMVehicleTypes>3</DualPDMBSMVehicleTypes>	
+		<PDMEquipped>
+			<DSRC>
+				<VehicleTypes>1</VehicleTypes>
+			</DSRC>
+			<DualComm>
+				<VehicleTypes>4</VehicleTypes>
+			</DualComm>
+		</PDMEquipped>
+		<BSMEquipped>
+			<DualComm>
+				<VehicleTypes>2</VehicleTypes>
+			</DualComm>
+		</BSMEquipped>
+		<PDMBSMEquipped>
+			<Cellular>
+				<VehicleTypes>3</VehicleTypes>
+			</Cellular>
+		</PDMBSMEquipped>			
+	</EquippedVehicles>
+	<NumberEquippedVehicles>1000</NumberEquippedVehicles>
+	<OutputFiles>
+		<PDMTransFile>Example_FZP/PDMTrans.csv</PDMTransFile>
+		<PDMAllFile>Example_FZP/PDMAll.csv</PDMAllFile>
+		<BSMTransFile>Example_FZP/BSMTrans.csv</BSMTransFile>
+	</OutputFiles>		
+</ControlFile>
