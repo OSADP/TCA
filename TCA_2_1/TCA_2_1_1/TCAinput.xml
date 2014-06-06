@@ -13,7 +13,7 @@
 	<InputFiles>
 		<TrajectoryFile>
 			<FileType>csv</FileType>
-			<FileName>NCAR09_traj_0420_test.csv</FileName>
+			<FileName>sample_GPS_run.csv</FileName>
 			<CSVTrajectoryFileFields>
 				<X>x-ft</X>
 				<Y>y-ft</Y>
