@@ -14,8 +14,8 @@
 		<TrajectoryFile>
 			<FileType>vissim</FileType>
 		</TrajectoryFile>
-		<RSELocationFile>code/Sample_DSRC_And_Cellular/RSE_Locations_Intersection.csv</RSELocationFile>
-		<StrategyFile>code/Sample_DSRC_And_Cellular/Strategy_Sample_DSRC_Cellular.xml</StrategyFile>		
+		<RSELocationFile>code/RSE_Locations_Intersection.csv</RSELocationFile>
+		<StrategyFile>code/Strategy_Sample_DSRC_Cellular.xml</StrategyFile>		
 	</InputFiles>
 	<EquippedVehicles>
 		<PDMVehicleTypes>1</PDMVehicleTypes>
@@ -23,10 +23,10 @@
 	</EquippedVehicles>
 	<ColorDisplayDuration>2</ColorDisplayDuration>
 	<OutputFiles>
-		<PDMAllFile>code/Sample_DSRC_And_Cellular/PDMALLSnapshots.csv</PDMAllFile>
-		<PDMTransFile>code/Sample_DSRC_And_Cellular/PDMTransSnapshots.csv</PDMTransFile>
-		<BSMTransFile>code/Sample_DSRC_And_Cellular/BSMTransSnapshots.csv</BSMTransFile>		
-		<BSMExtendedFile>code/Sample_DSRC_And_Cellular/BSMExtendedSnapshots.csv</BSMExtendedFile>
+		<PDMAllFile>code/PDMALLSnapshots.csv</PDMAllFile>
+		<PDMTransFile>code/PDMTransSnapshots.csv</PDMTransFile>
+		<BSMTransFile>code/BSMTransSnapshots.csv</BSMTransFile>		
+		<BSMExtendedFile>code/BSMExtendedSnapshots.csv</BSMExtendedFile>
 		<BSMExtendedFlag>1</BSMExtendedFlag>		
 	</OutputFiles>
 </ControlFile>

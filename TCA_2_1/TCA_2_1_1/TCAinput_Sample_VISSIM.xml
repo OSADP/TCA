@@ -13,16 +13,16 @@
 	<InputFiles>	
 		<TrajectoryFile>
 			<FileType>vissim</FileType>
-			<FileName>Sample_VISSIM/Sample_VISSIM_output.fzp</FileName>		
+			<FileName>Sample_VISSIM_output.fzp</FileName>		
 		</TrajectoryFile>			
-		<RSELocationFile>Sample_VISSIM/RSE_Locations_VISSIM.csv</RSELocationFile>
-		<StrategyFile>Sample_VISSIM/Strategy_Sample_VISSIM.xml</StrategyFile>		
+		<RSELocationFile>RSE_Locations_VISSIM.csv</RSELocationFile>
+		<StrategyFile>Strategy_Sample_VISSIM.xml</StrategyFile>		
 	</InputFiles>
 	<EquippedVehicles>
 		<PDMVehicleTypes>1</PDMVehicleTypes>
 	</EquippedVehicles>	
 	<OutputFiles>
-		<PDMAllFile>Sample_VISSIM/PDMAllSnapshots.csv</PDMAllFile>
-		<PDMTransFile>Sample_VISSIM/PDMTransSnapshots.csv</PDMTransFile>	
+		<PDMAllFile>PDMAllSnapshots.csv</PDMAllFile>
+		<PDMTransFile>PDMTransSnapshots.csv</PDMTransFile>	
 	</OutputFiles>
 </ControlFile>

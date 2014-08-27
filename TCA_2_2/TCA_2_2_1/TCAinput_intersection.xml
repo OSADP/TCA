@@ -13,11 +13,11 @@
 	<InputFiles>	
 		<TrajectoryFile>
 			<FileType>vissim</FileType>
-			<FileName>Example_FZP/intersection.fzp</FileName>		
+			<FileName>intersection.fzp</FileName>		
 		</TrajectoryFile>			
-		<RSELocationFile>Example_FZP/RSE_Locations_intersection.csv</RSELocationFile>
-		<StrategyFile>Example_FZP/Strategy_intersection.xml</StrategyFile>		
-		<RegionsFile>Example_FZP/TCA_Regions_intersection.xml</RegionsFile>
+		<RSELocationFile>RSE_Locations_intersection.csv</RSELocationFile>
+		<StrategyFile>Strategy_intersection.xml</StrategyFile>		
+		<RegionsFile>TCA_Regions_intersection.xml</RegionsFile>
 	</InputFiles>
 	<EquippedVehicles>		
 		<PDMVehicleTypes>1,4</PDMVehicleTypes>
@@ -44,8 +44,8 @@
 	</EquippedVehicles>
 	<NumberEquippedVehicles>1000</NumberEquippedVehicles>
 	<OutputFiles>
-		<PDMTransFile>Example_FZP/PDMTrans.csv</PDMTransFile>
-		<PDMAllFile>Example_FZP/PDMAll.csv</PDMAllFile>
-		<BSMTransFile>Example_FZP/BSMTrans.csv</BSMTransFile>
+		<PDMTransFile>PDMTrans.csv</PDMTransFile>
+		<PDMAllFile>PDMAll.csv</PDMAllFile>
+		<BSMTransFile>BSMTrans.csv</BSMTransFile>
 	</OutputFiles>		
 </ControlFile>

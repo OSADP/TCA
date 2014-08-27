@@ -13,7 +13,7 @@
 	<InputFiles>
 		<TrajectoryFile>
 			<FileType>csv</FileType>
-			<FileName>NCAR09_traj_0420_test.csv</FileName>
+			<FileName>sample_csv.csv</FileName>
 			<CSVTrajectoryFileFields>
 				<X>x-ft</X>
 				<Y>y-ft</Y>
@@ -22,17 +22,17 @@
 				<Speed>speed (mph)</Speed>	
 			</CSVTrajectoryFileFields>		
 		</TrajectoryFile>
-		<StrategyFile>Sample_Cellular/Strategy_Sample_Cellular.xml</StrategyFile>		
+		<StrategyFile>Strategy_Sample_Cellular.xml</StrategyFile>		
 	</InputFiles>
 	<EquippedVehicles>
 		<PDMMarketPenetration>50</PDMMarketPenetration>	
 		<BSMMarketPenetration>50</BSMMarketPenetration>			
 	</EquippedVehicles>	
 	<OutputFiles>
-		<PDMAllFile>Sample_Cellular/PDMTCAoutALL.csv</PDMAllFile>
-		<PDMTransFile>Sample_Cellular/PDMTCAoutTrans.csv</PDMTransFile>
-		<BSMTransFile>Sample_Cellular/BSMTCAoutTrans.csv</BSMTransFile>		
-		<BSMExtendedFile>Sample_Cellular/BSMExtendedTrans.csv</BSMExtendedFile>		
+		<PDMAllFile>PDMTCAoutALL.csv</PDMAllFile>
+		<PDMTransFile>PDMTCAoutTrans.csv</PDMTransFile>
+		<BSMTransFile>BSMTCAoutTrans.csv</BSMTransFile>		
+		<BSMExtendedFile>BSMExtendedTrans.csv</BSMExtendedFile>		
 	</OutputFiles>
 	<BSMExtendedFlag>1</BSMExtendedFlag>
 </ControlFile>

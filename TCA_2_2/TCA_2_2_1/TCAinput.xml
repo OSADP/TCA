@@ -6,7 +6,7 @@
 	<InputFiles>
 		<TrajectoryFile>
 			<FileType>csv</FileType>
-			<FileName>Example_CSV/sample_GPS_small.csv</FileName>
+			<FileName>sample_GPS_small.csv</FileName>
 			<CSVTrajectoryFileFields>
 				<X>x-ft</X>
 				<Y>y-ft</Y>
@@ -15,8 +15,8 @@
 				<Speed>speed (mph)</Speed>				
 			</CSVTrajectoryFileFields>
 		</TrajectoryFile>
-		<RSELocationFile>Example_CSV/RSE_Locations.csv</RSELocationFile>
-		<StrategyFile>Example_CSV/Strategy.xml</StrategyFile>	
+		<RSELocationFile>RSE_Locations.csv</RSELocationFile>
+		<StrategyFile>Strategy.xml</StrategyFile>	
 	</InputFiles>
 	<EquippedVehicles>
 		<BSMMarketPenetration>25</BSMMarketPenetration>
@@ -36,8 +36,8 @@
 		</PDMBSMEquipped>	
 	</EquippedVehicles>
 	<OutputFiles>
-		<PDMTransFile>Example_CSV/default_PDMTrans.csv</PDMTransFile>
-		<PDMAllFile>Example_CSV/defualt_PDMAll.csv</PDMAllFile>
-		<BSMTransFile>Example_CSV/defualt_BSMTrans.csv</BSMTransFile>
+		<PDMTransFile>default_PDMTrans.csv</PDMTransFile>
+		<PDMAllFile>defualt_PDMAll.csv</PDMAllFile>
+		<BSMTransFile>defualt_BSMTrans.csv</BSMTransFile>
 	</OutputFiles>
 </ControlFile>
