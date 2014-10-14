@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ControlFile>
+	<OutputLevel>3</OutputLevel>
+	<Title>Test File</Title>
+	<Seed>342554</Seed>
+	<InputFiles>
+		<RSELocationFile>RSE_Locations_intersection.csv</RSELocationFile>
+		<StrategyFile>Strategy_intersection.xml</StrategyFile>	
+		<RegionsFile>TCA_Regions_intersection.xml</RegionsFile>
+		<SPOTLocationFile>RSE_Locations_intersection.csv</SPOTLocationFile>
+	</InputFiles>
+	<EquippedVehicles>
+		<BSMVehicleTypes>2</BSMVehicleTypes>
+		<PDMVehicleTypes>1</PDMVehicleTypes>
+		<DualPDMBSMVehicleTypes>4</DualPDMBSMVehicleTypes>
+		<SPOTVehicleTypes>3</SPOTVehicleTypes>
+		<BSMEquipped>
+			<DualComm>
+				<VehicleTypes>2</VehicleTypes>
+			</DualComm>
+		</BSMEquipped>
+		<PDMEquipped>
+			<Cellular>
+				<VehicleTypes>1</VehicleTypes>
+			</Cellular>
+		</PDMEquipped>
+		<PDMBSMEquipped>
+			<DSRC>
+				<VehicleTypes>4</VehicleTypes>
+			</DSRC>
+		</PDMBSMEquipped>
+	</EquippedVehicles>
+</ControlFile>
