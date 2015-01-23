@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ControlFile>
+	<OutputLevel>1</OutputLevel>
+	<Title>Sample Control File</Title>
+	<Seed>342554</Seed>
+	<InputFiles>
+    <RSELocationFile>C:\Users\Public\paramics\data\BSM\colorDemo\code\TCA23_test/RSE_Locations_intersection.csv</RSELocationFile>
+    <StrategyFile>C:\Users\Public\paramics\data\BSM\colorDemo\code\TCA23_test/Strategy_intersection.xml</StrategyFile>
+    <RegionsFile>C:\Users\Public\paramics\data\BSM\colorDemo\code\TCA23_test/TCA_Regions_intersection.xml</RegionsFile>
+  </InputFiles>
+	<EquippedVehicles>
+		<BSMVehicleTypes>2</BSMVehicleTypes>
+		<PDMVehicleTypes>1,3</PDMVehicleTypes>
+		<DualPDMBSMVehicleTypes>4</DualPDMBSMVehicleTypes>
+		<BSMEquipped>
+			<DualComm>
+				<VehicleTypes>2</VehicleTypes>
+			</DualComm>
+		</BSMEquipped>
+		<PDMEquipped>
+			<DSRC>
+				<VehicleTypes>3</VehicleTypes>
+			</DSRC>
+			<Cellular>
+				<VehicleTypes>1</VehicleTypes>
+			</Cellular>
+		</PDMEquipped>
+		<PDMBSMEquipped>
+			<DSRC>
+				<VehicleTypes>4</VehicleTypes>
+			</DSRC>
+		</PDMBSMEquipped>
+	</EquippedVehicles>
+  <OutputFiles>
+    <PDMTransFile>C:\Users\Public\paramics\data\BSM\colorDemo\code\TCA23_test/default_PDMTrans.csv</PDMTransFile>
+    <PDMAllFile>C:\Users\Public\paramics\data\BSM\colorDemo\code\TCA23_test/default_PDMAll.csv</PDMAllFile>
+    <BSMTransFile>C:\Users\Public\paramics\data\BSM\colorDemo\code\TCA23_test/defualt_BSMTrans.csv</BSMTransFile>
+  </OutputFiles>
+</ControlFile>
