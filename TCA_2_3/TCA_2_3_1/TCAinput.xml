@@ -1,61 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ControlFile>
-	<!--
-	OutputLevel can be:
-	0=None
-	1=Just major events,
-	2=All SS activities,
-	3=Maximum output
- 	-->
 	<OutputLevel>1</OutputLevel>
-	<Title>Test File For Reading In VISSIM Data</Title>
+	<Title>Test File</Title>
 	<Seed>342554</Seed>
-	<InputFiles>	
+	<InputFiles>
 		<TrajectoryFile>
-			<FileType>vissim</FileType>
-			<FileName>Example_FZP/intersection.fzp</FileName>		
-		</TrajectoryFile>			
-		<RSELocationFile>Example_FZP/RSE_Locations_intersection.csv</RSELocationFile>
-		<StrategyFile>Example_FZP/Strategy_intersection.xml</StrategyFile>		
-		<RegionsFile>Example_FZP/TCA_Regions_intersection.xml</RegionsFile>
-		<SPOTLocationFile>Example_FZP/RSE_Locations_intersection.csv</SPOTLocationFile>
+			<FileType>csv</FileType>
+			<FileName>Example_CSV/test_csv_file.csv</FileName>
+			<CSVTrajectoryFileFields>
+				<X>x-ft</X>
+				<Y>y-ft</Y>
+				<Time>secs</Time>
+				<ID>veh</ID>
+				<Speed>speed (mph)</Speed>				
+			</CSVTrajectoryFileFields>
+		</TrajectoryFile>
+		<RSELocationFile>Example_CSV/RSE_Locations.csv</RSELocationFile>
+		<StrategyFile>Example_CSV/Strategy.xml</StrategyFile>
+		<RegionsFile>Example_CSV/TCA_Regions.xml</RegionsFile>	
 	</InputFiles>
-	<EquippedVehicles>		
+	<EquippedVehicles>
 		<BSMMarketPenetration>25</BSMMarketPenetration>
-		<PDMMarketPenetration>25</PDMMarketPenetration>
-		<DualPDMBSMMarketPenetration>15</DualPDMBSMMarketPenetration>
-		<SPOTMarketPenetration>15</SPOTMarketPenetration>
-		<CAMMarketPenetration>15</CAMMarketPenetration>
+		<DualPDMBSMMarketPenetration>50</DualPDMBSMMarketPenetration>
 		<BSMEquipped>
 			<DualComm>
 				<MarketPenetration>100</MarketPenetration>
 			</DualComm>
 		</BSMEquipped>
-		<PDMEquipped>
+		<PDMBSMEquipped>
+			<DSRC>
+				<MarketPenetration>50</MarketPenetration>
+			</DSRC>
 			<Cellular>
 				<MarketPenetration>50</MarketPenetration>
 			</Cellular>
-			<DSRC>
-				<MarketPenetration>50</MarketPenetration>
-			</DSRC>
-		</PDMEquipped>
-		<PDMBSMEquipped>
-			<DSRC>
-				<MarketPenetration>100</MarketPenetration>
-			</DSRC>
-		</PDMBSMEquipped>
-		<CAMEquipped>
-			<DSRC>
-				<MarketPenetration>100</MarketPenetration>
-			</DSRC>
-		</CAMEquipped>
+		</PDMBSMEquipped>	
 	</EquippedVehicles>
 	<OutputFiles>
-		<PDMTransFile>Example_FZP/PDMTrans.csv</PDMTransFile>
-		<PDMAllFile>Example_FZP/PDMAll.csv</PDMAllFile>
-		<BSMTransFile>Example_FZP/BSMTrans.csv</BSMTransFile>
-		<CAMTransFile>Example_FZP/CAMTrans.csv</CAMTransFile>
-		<SPOTTravelFile>Example_FZP/SPOT_TravelRecords.csv</SPOTTravelFile>
-		<SPOTBehaviorFile>Example_FZP/SPOT_BehaviorRecords.csv</SPOTBehaviorFile>
-	</OutputFiles>		
+		<PDMTransFile>Example_CSV/PDMTrans.csv</PDMTransFile>
+		<PDMAllFile>Example_CSV/PDMAll.csv</PDMAllFile>
+		<BSMTransFile>Example_CSV/BSMTrans.csv</BSMTransFile>
+	</OutputFiles>
 </ControlFile>
