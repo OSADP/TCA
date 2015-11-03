@@ -1,0 +1,17 @@
+2015-10-22 11:28:39,142 - INFO - TCA Version 2.3 created by Noblis
+2015-10-22 11:28:39,158 - INFO - Start time 11:28:39
+2015-10-22 11:28:39,158 - INFO - Loading control_values file C:\Users\M29565\Documents\Projects\tca\v_2 VISSIM\Build 3 Final Release\TCAinput.xml
+2015-10-22 11:28:39,160 - INFO - Loading strategy_values File C:\Users\M29565\Documents\Projects\tca\v_2 VISSIM\Build 3 Final Release\Strategy_intersection.xml
+2015-10-22 11:28:39,165 - INFO - Loading RSE file: C:\Users\M29565\Documents\Projects\tca\v_2 VISSIM\Build 3 Final Release\RSE_Locations_intersection.csv
+2015-10-22 11:28:39,167 - INFO - Number of RSE = 5
+2015-10-22 11:28:39,167 - INFO - Loading SPOT file: C:\Users\M29565\Documents\Projects\tca\v_2 VISSIM\Build 3 Final Release\RSE_Locations_intersection.csv
+2015-10-22 11:28:39,167 - INFO - Number of SPOT devices = 5
+2015-10-22 11:30:07,854 - INFO - End Run
+2015-10-22 11:30:10,443 - INFO - Total Number Vehicles 349 (Equipped Vehicles 286)
+2015-10-22 11:30:10,444 - INFO - PDM only 49 (DSRC 0, Celluar 49, Dual 0) 
+2015-10-22 11:30:10,444 - INFO - BSM only 93 (DSRC 0, Celluar 0, Dual 93) 
+2015-10-22 11:30:10,444 - INFO - PDM and BSM 59 (DSRC 59, Celluar 0, Dual 0) 
+2015-10-22 11:30:10,446 - INFO - CAM only 85 (DSRC 85, Celluar 0, Dual 0) 
+2015-10-22 11:30:10,447 - INFO - SPOT only 0 (DSRC 0) 
+2015-10-22 11:30:10,447 - INFO - End time 11:30:10 (91.322000)
+2015-10-22 11:30:10,447 - INFO - ************  End Program  *******************

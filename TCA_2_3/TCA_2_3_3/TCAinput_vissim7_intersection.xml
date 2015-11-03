@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ControlFile>
+	<!--
+	OutputLevel can be:
+	0=None
+	1=Just major events,
+	2=All SS activities,
+	3=Maximum output
+ 	-->
+	<OutputLevel>1</OutputLevel>
+	<Title>Test File For Reading In VISSIM7 Data</Title>
+	<Seed>342554</Seed>
+	<InputFiles>	
+		<TrajectoryFile>
+			<FileType>vissim7</FileType>
+			<FileName>Example_FZP/intersection_VISSIM7.fzp</FileName>		
+		</TrajectoryFile>			
+		<RSELocationFile>Example_FZP/RSE_Locations_intersection.csv</RSELocationFile>
+		<StrategyFile>Example_FZP/Strategy_intersection.xml</StrategyFile>		
+		<RegionsFile>Example_FZP/TCA_Regions_intersection.xml</RegionsFile>
+		<SPOTLocationFile>Example_FZP/RSE_Locations_intersection.csv</SPOTLocationFile>
+	</InputFiles>
+	<EquippedVehicles>		
+		<BSMMarketPenetration>25</BSMMarketPenetration>
+		<PDMMarketPenetration>25</PDMMarketPenetration>
+		<DualPDMBSMMarketPenetration>15</DualPDMBSMMarketPenetration>
+		<SPOTMarketPenetration>15</SPOTMarketPenetration>
+		<CAMMarketPenetration>15</CAMMarketPenetration>
+		<BSMEquipped>
+			<DualComm>
+				<MarketPenetration>100</MarketPenetration>
+			</DualComm>
+		</BSMEquipped>
+		<PDMEquipped>
+			<Cellular>
+				<MarketPenetration>50</MarketPenetration>
+			</Cellular>
+			<DSRC>
+				<MarketPenetration>50</MarketPenetration>
+			</DSRC>
+		</PDMEquipped>
+		<PDMBSMEquipped>
+			<DSRC>
+				<MarketPenetration>100</MarketPenetration>
+			</DSRC>
+		</PDMBSMEquipped>
+		<CAMEquipped>
+			<DSRC>
+				<MarketPenetration>100</MarketPenetration>
+			</DSRC>
+		</CAMEquipped>
+	</EquippedVehicles>
+	<OutputFiles>
+		<PDMTransFile>Example_FZP/PDMTrans.csv</PDMTransFile>
+		<PDMAllFile>Example_FZP/PDMAll.csv</PDMAllFile>
+		<BSMTransFile>Example_FZP/BSMTrans.csv</BSMTransFile>
+		<CAMTransFile>Example_FZP/CAMTrans.csv</CAMTransFile>
+		<SPOTTravelFile>Example_FZP/SPOT_TravelRecords.csv</SPOTTravelFile>
+		<SPOTBehaviorFile>Example_FZP/SPOT_BehaviorRecords.csv</SPOTBehaviorFile>
+	</OutputFiles>		
+</ControlFile>

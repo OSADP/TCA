@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ControlFile>
+	<!--
+	OutputLevel can be:
+	0=None
+	1=Just major events,
+	2=All SS activities,
+	3=Maximum output
+ 	-->
+	<OutputLevel>2</OutputLevel>
+	<Title>Test File For Reading In VISSIM Data</Title>
+	<Seed>342554</Seed>
+	<InputFiles>	
+		<TrajectoryFile>
+			<FileType>vissim</FileType>
+			<FileName>Example_FZP/intersection.fzp</FileName>		
+		</TrajectoryFile>			
+		<SPOTLocationFile>Example_FZP/RSE_Locations_intersection.csv</SPOTLocationFile>
+		<StrategyFile>Example_FZP/Strategy_intersection.xml</StrategyFile>		
+	</InputFiles>
+	<EquippedVehicles>		
+		<SPOTVehicleIDs>2,6</SPOTVehicleIDs>	
+	</EquippedVehicles>
+	<OutputFiles>
+		<SPOTTravelFile>Example_FZP/SPOT_TravelRecords.csv</SPOTTravelFile>
+		<SPOTBehaviorFile>Example_FZP/SPOT_BehaviorRecords.csv</SPOTBehaviorFile>
+	</OutputFiles>		
+</ControlFile>

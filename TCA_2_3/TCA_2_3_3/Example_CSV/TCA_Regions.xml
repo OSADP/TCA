@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" ?> 
+<Regions> 
+	<Cell_Regions>
+	  <DefaultLossPercent>2</DefaultLossPercent>
+      <DefaultLatency>1</DefaultLatency>	
+      <MinPDMtoTransmit>4</MinPDMtoTransmit>
+	</Cell_Regions>   	
+</Regions>

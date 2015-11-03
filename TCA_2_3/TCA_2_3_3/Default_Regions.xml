@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8" ?> 
+<Regions> 
+    <Cell_Regions>
+      <!-- Default snapshot transmission loss percentage for cellular transmissions outside defined cellular regions. -->
+      <DefaultLossPercent>2</DefaultLossPercent>
+      <!-- Default latency (seconds) for cellular transmissions outside defined cellular regions -->
+      <DefaultLatency>1</DefaultLatency> 
+      <!-- Default mininum number of PDMs needed in the vehicle buffer for cellular transmission -->   
+      <MinPDMtoTransmit>4</MinPDMtoTransmit>
+      <Cell_Region> 
+          <Title>Cellular_Region1</Title> 
+          <!-- Upper left x and y coordinates of the region rectangle -->     
+          <UpperLeftPoint>
+            <X>-5314</X>
+            <Y>-2530</Y>
+          </UpperLeftPoint>
+          <!-- Lower right x and y coordinates of the region rectangle -->
+          <LowerRightPoint>
+            <X>-4917</X>
+            <Y>-2705</Y>          
+          </LowerRightPoint> 
+          <!-- Transmission loss percentage of cellular transmissons made within the region -->
+          <LossPercent>5</LossPercent>
+          <!-- Transmission latency (seconds) of cellular transmissions made within the region -->
+          <Latency>2</Latency>
+      </Cell_Region>  
+    </Cell_Regions>
+    <Event_Regions>
+        <Region>
+          <Title>AirTempHigh</Title>
+          <UpperLeftPoint>
+            <X>-6157</X>
+            <Y>-2530</Y>
+          </UpperLeftPoint>
+          <LowerRightPoint>
+            <X>-5624</X>
+            <Y>-2705</Y>          
+          </LowerRightPoint> 
+          <TimePeriods> 
+            <Period> 
+                <!-- Start and end time that the event region is active -->    
+                <StartTime>0</StartTime> 
+                <EndTime>1200</EndTime>
+             </Period>
+          </TimePeriods> 
+          <Events>
+              <Event>
+                <Title>AirTemp</Title>
+                <!-- Standard deviation probability requires a mean and a standard deviation (SD) --> 
+                <Mean>7</Mean>
+                <SD>4</SD>
+                <!-- Static recheck value (seconds) determines how often the TCA checks this event -->
+                <Recheck>10</Recheck>
+              </Event>          
+          </Events>
+        </Region>
+        <Region>
+          <Title>HeavyRain</Title>      
+          <UpperLeftPoint>
+            <X>-5314</X>
+            <Y>-2530</Y>
+          </UpperLeftPoint>
+          <LowerRightPoint>
+            <X>-4917</X>
+            <Y>-2705</Y>          
+          </LowerRightPoint>  
+          <TimePeriods>
+              <Period>
+                <StartTime>50</StartTime> 
+                <EndTime>100</EndTime>
+              </Period>
+              <Period>
+                <StartTime>300</StartTime>
+                <EndTime>800</EndTime>
+              </Period>
+          </TimePeriods> 
+          <Events>
+              <Event>
+                <Title>Wipers</Title>
+                <!-- Static probability (%) of occurrence -->
+                <Probability>85</Probability>
+                <!-- The mean value for generating a random recheck value (seconds) using a Poisson distribution -->
+                <RecheckPoisson>7</RecheckPoisson>
+              </Event>
+              <Event>
+                <Title>TractionControl</Title>
+                <Probability>5</Probability>
+                <Recheck>2</Recheck>
+              </Event>
+          </Events>      
+        </Region>
+    </Event_Regions>        
+</Regions>
