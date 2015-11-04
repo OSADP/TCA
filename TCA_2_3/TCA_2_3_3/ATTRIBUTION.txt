@@ -1,6 +1,6 @@
 Key contributors to the development of the Trajectory Conversion Algorithm (TCA) software 2.3,
 development of the TCA 2.3 test data set, and development of the documentation include:
-Taylor Deurbrouck, Rick Glassco, Carl Kain, Jim Larkin, James O'Hara, Meenakshy Vasudevan and Karl Wunderlich of Noblis.
+Taylor Deurbrouck, Rick Glassco, Carl Kain, Jim Larkin, Rena Liu, James O'Hara, Meenakshy Vasudevan and Karl Wunderlich of Noblis.
 
 The developers also wish to acknowledge several contributors to this study:
 
