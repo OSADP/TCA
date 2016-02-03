@@ -92,7 +92,7 @@ class TCA_Algorithm:
         if self.regions is None:
             latency = 0.0
             loss_percent = 0.0
-            mintransmit_PDM = 1
+            mintransmit_PDM = 4
         else:
             latency = self.regions.default_latency
             loss_percent = self.regions.default_loss

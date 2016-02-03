@@ -119,7 +119,7 @@ strategy_values = {
             'MinRSERange': [492, 'Default', '', 'int', 'Inputs/DSRC/RSEInformation/MinRSERange'],
             'MaxRSERange': [492, 'Default', '', 'int', 'Inputs/DSRC/RSEInformation/MaxRSERange'],
             'TimeoutRSE': [200, 'Default', '', 'int', 'Inputs/DSRC/RSEInformation/TimeoutRSE'],
-            'MinNumberofPDMtoTransmitViaDSRC' : [1, 'Default', '', 'int', 'Inputs/DSRC/RSEInformation/MinNumberofPDMtoTransmitViaDSRC'],
+            'MinNumberofPDMtoTransmitViaDSRC' : [4, 'Default', '', 'int', 'Inputs/DSRC/RSEInformation/MinNumberofPDMtoTransmitViaDSRC'],
 
             'SPOTdeviceRange' : [32.8, 'Default', '', 'float', 'Inputs/SPOT/DeviceRange'], #SPOT devices usually cover 20 meters (10 meter radius or 32.8 feet) of roadway
             'SPOTBehaviorSensingFrequency' : [0.3, 'Default', '', 'float', 'Inputs/SPOT/BehaviorSensingFrequency'],

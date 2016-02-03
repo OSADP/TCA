@@ -5,6 +5,9 @@
   <PDM>
    <TimeBeforePDMCollection>0</TimeBeforePDMCollection>
    <DistanceBeforePDMCollection>0</DistanceBeforePDMCollection>
+   <PSNStrategy>
+        <Gap>1</Gap>
+   </PSNStrategy>
   </PDM>
 </Inputs>
 </Strategy>

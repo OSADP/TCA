@@ -80,8 +80,8 @@ class PDM(object):
             veh_data['PSN_distance_to_change'] = veh_data['total_dist_traveled']  + self.CF.Strategy["DistanceBetweenPSNSwitches"]
             veh_data['PSN_time_to_end_of_PSN'] = tp + self.CF.Strategy['TimeBetweenPSNSwitches']
             if self.CF.Control["OutputLevel"] >= 2:
-                logger.debug("PSN changed to %d for vehicle ID %s at time %s because of RSE transmission"
-                             % (veh_data['PSN'],  veh_data['vehicle_ID'], tp))
+                logger.debug("PSN changed to %d for vehicle ID %s at time %s, new distance to change: %s new time to end of PSN: %s"
+                             % (veh_data['PSN'],  veh_data['vehicle_ID'], tp, veh_data['PSN_distance_to_change'], veh_data['PSN_time_to_end_of_PSN']))
 
         def start_gap( veh_data, tp):
                 """
@@ -94,16 +94,20 @@ class PDM(object):
                 veh_data['PSN_time_to_end_gap'] = tp +  self.random_generator['GapTimeout']
                 veh_data['PSN_distance_to_end_of_gap'] =  veh_data['total_dist_traveled'] + self.random_generator['GapDistance']
                 if self.CF.Control["OutputLevel"] >= 2:
-                    logger.debug("Vehicle ID %s at time %s enters PSN privacy gap because of RSE transmission"
-                                 % (veh_data['vehicle_ID'], tp))
+                    logger.debug('Vehicle ID %s gap started - time to until gap ends: %s, distance until gap ends: %s' % (veh_data['vehicle_ID'],\
+                        veh_data['PSN_time_to_end_gap'],veh_data['PSN_distance_to_end_of_gap']))
                 veh_data['privacy_gap_start'] = tp
                 veh_data['in_privacy_gap'] = True
 
-        #Change PSN or activate privacy gap if vehicle has transmitted to an RSE and is PDM equipped
-        if veh_data['dsrc_transmit_pdm']  and (veh_data['prev_time_PDM_dsrc_transmit'] == tp):
+        #Change PSN or activate privacy gap if a PDM vehicle has transmitted to an RSE or via cellular
+        if (veh_data['dsrc_transmit_pdm'] and (veh_data['prev_time_PDM_dsrc_transmit'] == tp)) or \
+            (veh_data['prev_time_PDM_cellular_transmit'] == tp):
             if self.CF.Strategy["GapMaxDistance"] == 0 or self.CF.Strategy["GapMaxTime"] == 0:
                 change_PSN(veh_data, tp)
             else:
+                if self.CF.Control["OutputLevel"] >= 2:
+                    logger.debug("Vehicle ID %s at time %s enters PSN privacy gap because of PDM transmission"
+                                 % (veh_data['vehicle_ID'], tp))
                 start_gap(veh_data, tp)
 
 
@@ -116,6 +120,9 @@ class PDM(object):
 
             #4.4 Check for Gap  (Note if CF.Strategy["Gap"]=0 then no Gaps are added)
             if self.CF.Strategy["Gap"] == 1:
+                if self.CF.Control["OutputLevel"] >= 2:
+                    logger.debug("Vehicle ID %s at time %s enters PSN privacy gap because PSN distance and time has expired"
+                                 % (veh_data['vehicle_ID'], tp))
                 start_gap(veh_data, tp)
             else:
                 change_PSN(veh_data, tp)
@@ -123,14 +130,11 @@ class PDM(object):
 
         #4.5 Check to see if privacy gap has expired; generate new PSN
         if veh_data['in_privacy_gap'] and \
-           (veh_data['total_dist_traveled'] >= veh_data['PSN_distance_to_end_of_gap']) or \
-           (tp >= veh_data['PSN_time_to_end_gap']):
-
+           ((veh_data['total_dist_traveled'] >= veh_data['PSN_distance_to_end_of_gap']) or \
+           (tp >= veh_data['PSN_time_to_end_gap'])):
                 change_PSN(veh_data, tp )
                 veh_data['in_privacy_gap'] = False
-                if self.CF.Control["OutputLevel"] >= 2:
-                    logger.debug("PSN changed to %d for vehicle ID %s at time %s because privacy gap expired" %
-                                     (veh_data['PSN'], veh_data['vehicle_ID'], tp))
+
 
     # Check Snapshot Trigger
     #-------------------------------------------------------------------------
