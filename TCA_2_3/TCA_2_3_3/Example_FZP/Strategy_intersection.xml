@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?> 
+<Strategy>
+  <Title>J2735 Noblis Modified Strategy</Title>
+<Inputs> 
+  <PDM>
+   <TimeBeforePDMCollection>0</TimeBeforePDMCollection>
+   <DistanceBeforePDMCollection>0</DistanceBeforePDMCollection>
+   <PSNStrategy>
+        <Gap>1</Gap>
+   </PSNStrategy>
+  </PDM>
+</Inputs>
+</Strategy>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ControlFile>
+	<OutputLevel>1</OutputLevel>
+	<Title>Test File</Title>
+	<Seed>342554</Seed>
+	<InputFiles>
+		<TrajectoryFile>
+			<FileType>csv</FileType>
+			<FileName>Example_CSV/NCAR09_traj_0420_test.csv</FileName>
+			<CSVTrajectoryFileFields>
+				<X>x-ft</X>
+				<Y>y-ft</Y>
+				<Time>secs</Time>
+				<ID>veh</ID>
+				<Speed>speed (mph)</Speed>				
+			</CSVTrajectoryFileFields>
+		</TrajectoryFile>
+		<RSELocationFile>Example_CSV/RSE_Locations.csv</RSELocationFile>
+		<StrategyFile>Example_CSV/Strategy.xml</StrategyFile>
+		<RegionsFile>Example_CSV/TCA_Regions.xml</RegionsFile>	
+	</InputFiles>
+	<EquippedVehicles>
+		<BSMMarketPenetration>25</BSMMarketPenetration>
+		<DualPDMBSMMarketPenetration>50</DualPDMBSMMarketPenetration>
+		<BSMEquipped>
+			<DualComm>
+				<MarketPenetration>100</MarketPenetration>
+			</DualComm>
+		</BSMEquipped>
+		<PDMBSMEquipped>
+			<DSRC>
+				<MarketPenetration>50</MarketPenetration>
+			</DSRC>
+			<Cellular>
+				<MarketPenetration>50</MarketPenetration>
+			</Cellular>
+		</PDMBSMEquipped>	
+	</EquippedVehicles>
+	<OutputFiles>
+		<PDMTransFile>Example_CSV/PDMTrans.csv</PDMTransFile>
+		<PDMAllFile>Example_CSV/PDMAll.csv</PDMAllFile>
+		<BSMTransFile>Example_CSV/BSMTrans.csv</BSMTransFile>
+	</OutputFiles>
+</ControlFile>
