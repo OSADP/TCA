@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<DIDC>
+    <Title>DIDC Parameter File</Title>
+    <TransmissionThreshold>4</TransmissionThreshold>
+    <RoutesFile>Example_DIDC/pcn_full_route.csv</RoutesFile>
+    <LinkLengthsFile>Example_DIDC/pcn_link_lengths.csv</LinkLengthsFile>
+    <Triggers>
+        <Trigger>
+            <Title>Periodic</Title>
+            <Start> Speed &lt; 1810293812 </Start>
+            <End> Speed &gt; 12093810274 </End>
+            <Type>1</Type>
+            <OptimizationInterval>270</OptimizationInterval>
+            <GenerationMeanTime>210</GenerationMeanTime>
+            <Targets>
+                <GlobalTargets>
+                    <TargetSamplingRate>250</TargetSamplingRate>
+                </GlobalTargets>
+                <!--Example of Regional Targets: <RegionalTargets>
+                    <TargetBMMsPerSegment>25</TargetBMMsPerSegment>
+                    <SegmentLength>1000</SegmentLength>
+                    <RegionalDIDC>True</RegionalDIDC>
+                </RegionalTargets> -->
+            </Targets>
+        </Trigger>
+        <Trigger>
+            <Title>Queue</Title>
+            <Start>speed &lt; 6.8 </Start>
+            <End>speed &gt;= 10</End>
+            <Type>2</Type>
+            <OptimizationInterval>60</OptimizationInterval>
+            <GenerationMeanTime>5</GenerationMeanTime>
+            <QueueEstimation>
+                <Links>4,17,23</Links>
+            </QueueEstimation>
+            <Targets>
+                <RegionalTargets>
+                    <TargetBMMsPerSegment>350</TargetBMMsPerSegment>
+                    <SegmentLength>100</SegmentLength>
+                </RegionalTargets>
+            </Targets>
+        </Trigger>
+        <!-- <Trigger>
+            <Title>Turning</Title>
+            <Start>abs(yawrate)&gt;9.8</Start>
+            <End>abs(yawrate)&lt;1.0</End>
+            <Type>2</Type>
+            <OptimizationInterval>300</OptimizationInterval>
+            <GenerationMeanTime>40</GenerationMeanTime>
+            <MedianPostTriggerReports>0</MedianPostTriggerReports>
+            <IntersectionRegions>
+                <Intersection>
+                    <Title>A</Title>
+                    <x>16200,16500</x>
+                    <y>-100,-0</y>
+                </Intersection>
+            </IntersectionRegions>
+            <Targets>
+                <IntersectionTargets>
+                    <TargetBMMsPerIntersection>343</TargetBMMsPerIntersection>
+                </IntersectionTargets>
+            </Targets>
+        </Trigger>
+        <Trigger>
+            <Title>Traction Control</Title>
+            <Start>TractionControl = 1</Start>
+            <End>TractionControl = 0</End>
+            <Type>4</Type> 
+            <OptimizationInterval>15</OptimizationInterval>
+            <BurstMessages>
+                <BurstTimeLength>2</BurstTimeLength>
+                <BurstTimeExtension>11.0</BurstTimeExtension>
+                <BurstRange>100</BurstRange>
+                <BurstGenerationTime>8</BurstGenerationTime>
+            </BurstMessages>
+            <GenerationMeanTime>22</GenerationMeanTime>
+            <MedianPostTriggerReports>0</MedianPostTriggerReports>
+        </Trigger> -->
+    </Triggers>
+</DIDC>
