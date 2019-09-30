@@ -13,7 +13,7 @@ the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS
 KIND, either express or implied. See the License for the specific language governing
 permissions and limitations under the License.
 
-System Requirements
+Configuration
 -------------------------
 The TCA 2.0 software can run on most standard Window or Linux based computers with 
 Pentium core processers, with at least two gigabits of RAM and at least 100 MB of drive space.
@@ -37,9 +37,18 @@ The TCA 2.0 software is packaged with Word based User Guide
 "The Trajectory Convertor Algorithm 2 3 User manual.doc" that contains all information about background
 purpose, benefits, objectives, inputs/outputs, how to run the software and requirements for the software.
 
-Web sites
----------
-The TCA 2.0 software is distributed through the USDOT's JPO
-Open Source Application Development Portal (OSADP)
+Code.gov Info
+----------------
+Agency: DOT
 
-http://itsforge.net/ 
+Short Description: The Trajectory Conversion Algorithm (TCA) Software is designed to test different strategies for producing, transmitting, and storing Connected Vehicle information.
+
+Status: Beta
+
+Tags: transporation, connected vehicles, data emulator, BSM
+
+Labor Hours: 0
+
+Contact Name: Jim Larkin
+
+Contact Phone: 202-863-2978
